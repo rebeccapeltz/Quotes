@@ -6,6 +6,9 @@
       <h2>{{ posts.quote.body }}</h2>
       <h3>{{posts.quote.author}}</h3>
     </div>
+    <div>
+      <input onclick='responsiveVoice.speak("");' type='button' value='🔊 Play' />
+    </div>
     <form v-on:submit.prevent="getQuote(query)"></form>
   </div>
 </template>
