@@ -1,17 +1,18 @@
-
 <template>
   <div class="quoteofday">
     <h1>Quote of the Day!</h1>
-    <div v-if="posts && posts.quote">
+    <div class="quoteContainer" v-if="posts && posts.quote">
       <h2>{{ posts.quote.body }}</h2>
       <h3>{{posts.quote.author}}</h3>
     </div>
     <div>
-      <input onclick='responsiveVoice.speak("");' type='button' value='🔊 Play' />
+      <button v-on:click="play">Click to play Quote of Day.</button>
     </div>
     <form v-on:submit.prevent="getQuote(query)"></form>
   </div>
 </template>
+
+
 
 <script>
 import axios from "axios";
@@ -26,14 +27,20 @@ export default {
   },
   created() {
     axios
-      .get(` https://favqs.com/api/qotd`)
+      .get(`https://favqs.com/api/qotd`)
       .then(response => {
         this.posts = response.data;
         console.log(this.posts);
+        
       })
       .catch(e => {
         this.errors.push(e);
       });
+  },
+  methods: {
+    play: function (){
+      responsiveVoice.speak(this.posts.quote.body, "UK English Male");
+    }
   }
 };
 </script>
