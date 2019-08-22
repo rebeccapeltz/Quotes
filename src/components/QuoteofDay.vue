@@ -39,7 +39,8 @@ export default {
   },
   methods: {
     play: function (){
-      responsiveVoice.speak(this.posts.quote.body, "UK English Male");
+      responsiveVoice.speak(this.posts.quote.body, "UK English Female");
+      responsiveVoice.speak(this.posts.quote.author, "UK English Female");
     }
   }
 };
