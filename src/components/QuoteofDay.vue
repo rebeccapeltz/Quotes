@@ -6,7 +6,14 @@
       <h3>{{posts.quote.author}}</h3>
     </div>
     <div>
+      <br />
       <button v-on:click="play">Click to play Quote of Day.</button>
+      <br />
+      <br />
+      <br />
+      <p>
+        <router-link to="/SearchQuote">Search Quote</router-link>
+      </p>
     </div>
     <form v-on:submit.prevent="getQuote(query)"></form>
   </div>
@@ -31,14 +38,13 @@ export default {
       .then(response => {
         this.posts = response.data;
         console.log(this.posts);
-        
       })
       .catch(e => {
         this.errors.push(e);
       });
   },
   methods: {
-    play: function (){
+    play: function() {
       responsiveVoice.speak(this.posts.quote.body, "UK English Female");
       responsiveVoice.speak(this.posts.quote.author, "UK English Female");
     }
