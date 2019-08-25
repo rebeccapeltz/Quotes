@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import QuoteofDay from '@/QuoteofDay'
-import SearchQuote from '@/SearchQuote'
+import QuoteofDay from '@/components/QuoteofDay'
+import SearchQuote from '@/components/SearchQuote'
 
 Vue.use(Router)
 export default new Router({

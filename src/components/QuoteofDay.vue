@@ -8,11 +8,8 @@
     <div>
       <br />
       <button v-on:click="play">Click to play Quote of Day.</button>
-      <br />
-      <br />
-      <br />
       <p>
-        <router-link to="/SearchQuote">Search Quote</router-link>
+        <router-link :to="{path: 'SearchQuote'}">Search Quote</router-link>
       </p>
     </div>
     <form v-on:submit.prevent="getQuote(query)"></form>
