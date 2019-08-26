@@ -2,6 +2,7 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <QuoteofDay msg="Quote of the Day!"/>
+    <router-view/>
   </div>
 </template>
 
@@ -9,10 +10,7 @@
 import QuoteofDay from './components/QuoteofDay.vue'
 
 export default {
-  name: 'app',
-  components: {
-    QuoteofDay
-  }
+  name: 'app'
 }
 </script>
 

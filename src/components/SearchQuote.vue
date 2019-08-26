@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="searchQuote">
     <h3>Search for a Quote:</h3>
     <p>
       <strong>{{author}}</strong>
@@ -21,8 +21,8 @@ export default {
     };
   },
   created: function() {
-    this.author = this.$route.params.author;
-    this.body = this.$route.params.body;
+    this.author = this.posts.quote.author;
+    this.body = this.posts.quote.body;
   }
 };
 </script>

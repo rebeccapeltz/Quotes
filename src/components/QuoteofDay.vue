@@ -9,7 +9,7 @@
       <br />
       <button v-on:click="play">Click to play Quote of Day.</button>
       <p>
-        <router-link :to="{path: 'SearchQuote'}">Search Quote</router-link>
+        <router-link :to="{path: 'searchQuote'}">Search Quote</router-link>
       </p>
     </div>
     <form v-on:submit.prevent="getQuote(query)"></form>
@@ -22,7 +22,7 @@
 import axios from "axios";
 
 export default {
-  name: "quoteofDay",
+  name: "quoteofday",
   data() {
     return {
       msg: "Quote of Day",

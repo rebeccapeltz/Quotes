@@ -4,17 +4,18 @@ import QuoteofDay from '@/components/QuoteofDay'
 import SearchQuote from '@/components/SearchQuote'
 
 Vue.use(Router)
+
 export default new Router({
     routes:[
         {
             path: '/',
             name: 'quoteofday',
-            compnent: QuoteofDay
+            component: QuoteofDay
         },
         {
             path: '/SearchQuote',
             name: 'searchQuote',
-            compnent: SearchQuote
+            component: SearchQuote
         }
     ]
 })
