@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <QuoteofDay msg="Quote of the Day!"/>
+    <!-- <QuoteofDay msg="Quote of the Day!"/> -->
     <router-view/>
   </div>
 </template>
